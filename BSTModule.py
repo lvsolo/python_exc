@@ -110,4 +110,20 @@ class Tree(object):
 
     
     def postOrderHelper(self,node):
+        if self._rootNode.isEmpty():
+            print "trying to traversal an empty BST in post order"
+        else:
+            self.postOrderHelper(self._rootNode)
+            print '\npostOrderTraversal ends'
+
+    
+    def postOrderHelper(self,node):
+        if node is not None:
+        #if node.right is not None:
+            self.postOrderHelper(node.right)
+        #if node.left is not None:
+            self.postOrderHelper(node.left)
+            print node.data,
         
+
+   
